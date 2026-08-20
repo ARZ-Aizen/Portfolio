@@ -81,6 +81,7 @@ const achievementObserver = new IntersectionObserver(
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
+        entry.target.classList.remove("opacity-0", "translate-y-8");
       }
     });
   },
