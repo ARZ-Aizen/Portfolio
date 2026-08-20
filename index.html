@@ -6,25 +6,21 @@
     <title>Allan Oiga</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Smooth scrolling */
-        html {
+\        html {
             scroll-behavior: smooth;
         }
         
-        /* Full screen sections */
         section {
             min-height: 100vh;
             scroll-snap-align: start;
         }
         
-        /* Scroll snap container */
         body {
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
             background: #1a1a1a;
         }
 
-        /* Custom animations */
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -49,7 +45,6 @@
             transform: translateY(0);
         }
 
-        /* Modern Dark Gradient Backgrounds */
         .bg-hero {
             background: #1a1a1a;
             position: relative;
@@ -74,7 +69,6 @@
             50% { opacity: 0.5; }
         }
 
-        /* Animated Gradient Background */
         @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -87,7 +81,6 @@
             animation: gradient 15s ease infinite;
         }
 
-        /* Grid Pattern Overlay */
         .bg-grid {
             background-image: 
                 linear-gradient(rgba(59, 130, 246, 0.05) 1px, transparent 1px),
@@ -95,13 +88,11 @@
             background-size: 50px 50px;
         }
 
-        /* Dots Pattern */
         .bg-dots {
             background-image: radial-gradient(rgba(59, 130, 246, 0.15) 1px, transparent 1px);
             background-size: 20px 20px;
         }
 
-        /* Spotlight Effect */
         .spotlight {
             position: relative;
             overflow: hidden;
@@ -118,19 +109,16 @@
             pointer-events: none;
         }
 
-        /* Card Glassmorphism */
         .glass-card {
             background: rgba(45, 45, 45, 0.6);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(59, 130, 246, 0.2);
         }
 
-        /* Glow Effect */
         .glow {
             box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
         }
 
-        /* Hover Glow */
         .hover-glow:hover {
             box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
             transition: all 0.3s ease;
@@ -139,12 +127,10 @@
 </head>
 <body class="bg-slate-900">
 
-    <!-- Navigation Bar -->
     <nav class="bg-neutral-900/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-neutral-800">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-end items-center">
                 
-                <!-- Primary Nav (Desktop) -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#home" class="nav-link py-4 px-2 text-gray-400 font-semibold hover:text-blue-400 transition duration-300" data-section="home">Home</a>
                     <a href="#about" class="nav-link py-4 px-2 text-gray-400 font-semibold hover:text-blue-400 transition duration-300" data-section="about">About</a>
@@ -153,7 +139,6 @@
                     <a href="#contact" class="nav-link py-4 px-2 text-gray-400 font-semibold hover:text-blue-400 transition duration-300" data-section="contact">Contact</a>
                 </div>
                 
-                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button class="outline-none mobile-menu-button" id="menuBtn">
                         <svg class="w-6 h-6 text-gray-400"
@@ -170,7 +155,6 @@
             </div>
         </div>
         
-        <!-- Mobile Menu -->
         <div class="hidden mobile-menu bg-neutral-900" id="mobileMenu">
             <ul class="">
                 <li><a href="#home" class="mobile-nav-link block text-sm px-2 py-4 text-gray-400 hover:bg-blue-600 hover:text-white transition duration-300">Home</a></li>
@@ -182,7 +166,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="bg-hero bg-grid flex items-center fade-in-up">
         <div class="container mx-auto px-4">
             <div class="max-w-2xl">
@@ -202,12 +185,10 @@
         </div>
     </section>
 
-    <!-- About Me Section -->
     <section id="about" class="bg-neutral-800 bg-dots flex items-center spotlight">
         <div class="container mx-auto px-4 py-16">
             <div class="flex flex-col md:flex-row items-start gap-12">
                 
-                <!-- Text on Left -->
                 <div class="flex-1">
                     <h2 class="text-4xl font-bold text-white mb-6">About Me</h2>
                     <p class="text-gray-300 text-lg mb-4">
@@ -235,10 +216,8 @@
                     </div>
                 </div>
                 
-                <!-- Achievements / Certificates on Right -->
                 <div class="flex-1 space-y-8">
 
-                    <!-- Extracurricular Activities -->
                     <div class="achievement-card opacity-0 transform translate-y-8 glass-card p-6 rounded-xl shadow-md hover-glow">
                         <h3 class="text-2xl font-bold text-white mb-4">Extracurricular Activities</h3>
                         <ul class="list-disc list-inside text-gray-300 space-y-2">
@@ -247,7 +226,6 @@
                         </ul>
                     </div>
 
-                    <!-- Cisco Networking Academy Certificates -->
                     <div class="achievement-card opacity-0 transform translate-y-8 glass-card p-6 rounded-xl shadow-md hover-glow">
                         <h3 class="text-2xl font-bold text-white mb-4">Cisco Networking Academy Certificates</h3>
                         <ul class="list-disc list-inside text-gray-300 space-y-2">
@@ -264,14 +242,12 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="bg-neutral-900 bg-grid flex flex-col items-center">
         <div class="container mx-auto px-4 py-16 w-full">
             <h2 class="text-4xl font-bold text-white mb-12 text-center">My Projects</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto w-full">
                 
-                <!-- Project 1 - CLI Calculator -->
                 <div class="glass-card rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover-glow transition duration-300">
                     <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=250&fit=crop" alt="CLI Calculator" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -297,7 +273,6 @@
                     </div>
                 </div>
 
-                <!-- Project 2 - Jolikod POS -->
                 <div class="glass-card rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover-glow transition duration-300">
                     <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop" alt="Jolikod POS System" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -323,7 +298,6 @@
                     </div>
                 </div>
 
-                               <!-- Project 3 - GUI Calculator -->
                 <div class="glass-card rounded-lg shadow-lg overflow-hidden hover:shadow-2xl hover-glow transition duration-300">
                     <img src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?w=400&h=250&fit=crop" alt="GUI Calculator" class="w-full h-48 object-cover">
                     <div class="p-6">
@@ -353,7 +327,6 @@
 
             </div>
 
-            <!-- More Projects Button -->
             <div class="mt-12 text-center">
                 <a href="https://github.com/ARZ-Aizen" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-500 transition duration-300 glow">
                     More Projects
@@ -363,16 +336,13 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="bg-animated flex items-center">
         <div class="container mx-auto px-4 py-16">
 
             <h2 class="text-4xl font-bold text-white mb-12 text-center">My Skills</h2>
 
-            <!-- Skill Cards Grid -->
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
 
-                <!-- C Language -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/C_Logo.png" alt="C Logo" class="w-10 h-10">
@@ -381,7 +351,6 @@
                     <p class="text-gray-300 text-center mt-2">Procedural programming, memory handling, CLI tools.</p>
                 </div>
 
-                <!-- C++ -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/ISO_C%2B%2B_Logo.svg" alt="C++ Logo" class="w-10 h-10">
@@ -390,7 +359,6 @@
                     <p class="text-gray-300 text-center mt-2">OOP, algorithms, data structures, performance systems.</p>
                 </div>
 
-                <!-- Java -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" class="w-10 h-10">
@@ -399,7 +367,6 @@
                     <p class="text-gray-300 text-center mt-2">OOP development, console apps, backend logic.</p>
                 </div>
 
-                <!-- JavaScript -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo" class="w-10 h-10">
@@ -408,7 +375,6 @@
                     <p class="text-gray-300 text-center mt-2">Interactive web apps, DOM manipulation.</p>
                 </div>
 
-                <!-- Node.js -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js Logo" class="w-10 h-10">
@@ -417,7 +383,6 @@
                     <p class="text-gray-300 text-center mt-2">Backend APIs, REST, server-side apps.</p>
                 </div>
 
-                <!-- HTML -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo" class="w-10 h-10">
@@ -426,7 +391,6 @@
                     <p class="text-gray-300 text-center mt-2">Semantic structure, clean markup, accessibility.</p>
                 </div>
 
-                <!-- CSS -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" class="w-10 h-10">
@@ -435,7 +399,6 @@
                     <p class="text-gray-300 text-center mt-2">Styling, responsive design, animations, layouts.</p>
                 </div>
 
-                <!-- Tailwind CSS -->
                 <div class="glass-card p-6 rounded-xl shadow-md transform transition duration-500 hover:shadow-2xl hover:scale-105 flex flex-col items-center hover-glow">
                     <div class="bg-neutral-700 w-16 h-16 flex items-center justify-center rounded-full transition duration-500 hover:shadow-lg">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS Logo" class="w-10 h-10">
@@ -446,7 +409,6 @@
 
             </div>
 
-            <!-- Tools & Technologies -->
             <div class="mt-12 max-w-4xl mx-auto">
                 <h3 class="text-2xl font-bold text-white mb-6 text-center">Tools & Technologies</h3>
                 <div class="flex flex-wrap justify-center gap-4">
@@ -461,14 +423,12 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="bg-neutral-800 bg-dots flex items-center spotlight">
         <div class="container mx-auto px-4 py-16">
             <h2 class="text-4xl font-bold text-white mb-12 text-center">Get In Touch</h2>
             
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
                 
-                <!-- Contact Info -->
                 <div>
                     <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
                     <p class="text-gray-300 mb-8">
@@ -514,7 +474,6 @@
                         </div>
                     </div>
 
-                    <!-- Social Links -->
                     <div class="mt-8">
                         <p class="text-gray-400 font-semibold mb-4">Follow Me</p>
                         <div class="flex gap-4">
@@ -538,7 +497,6 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
                 <div>
                     <form class="space-y-4">
                         <div>
@@ -571,112 +529,13 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-black text-white py-8 border-t border-neutral-800">
         <div class="container mx-auto px-4 text-center">
             <p class="text-gray-400">&copy; 2025 Allan Oiga. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('menuBtn');
-        const menu = document.getElementById('mobileMenu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Active Navigation Link Handler
-        const navLinks = document.querySelectorAll('.nav-link');
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        const sections = document.querySelectorAll('section');
-
-        // Function to remove active class from all links
-        function removeActiveClasses() {
-            navLinks.forEach(link => {
-                link.classList.remove('text-white', 'border-b-4', 'border-blue-500');
-                link.classList.add('text-gray-400');
-            });
-            mobileNavLinks.forEach(link => {
-                link.classList.remove('text-white', 'bg-blue-600');
-            });
-        }
-
-        // Function to add active class
-        function addActiveClass(sectionId) {
-            removeActiveClasses();
-            
-            // Desktop nav
-            const activeLink = document.querySelector(`.nav-link[data-section="${sectionId}"]`);
-            if (activeLink) {
-                activeLink.classList.remove('text-gray-400');
-                activeLink.classList.add('text-white', 'border-b-4', 'border-blue-500');
-            }
-
-            // Mobile nav
-            const activeMobileLink = document.querySelector(`.mobile-nav-link[href="#${sectionId}"]`);
-            if (activeMobileLink) {
-                activeMobileLink.classList.add('text-white', 'bg-blue-600');
-            }
-        }
-
-        // Click handler for navigation links
-        navLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const sectionId = this.getAttribute('data-section');
-                addActiveClass(sectionId);
-            });
-        });
-
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const sectionId = this.getAttribute('href').substring(1);
-                addActiveClass(sectionId);
-                menu.classList.add('hidden'); // Close mobile menu after click
-            });
-        });
-
-        // Intersection Observer for scroll detection
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.2
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const sectionId = entry.target.getAttribute('id');
-                    addActiveClass(sectionId);
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-
-        // Set initial active state (home)
-        addActiveClass('home');
-
-        // Animate achievements when scrolled into view
-        const achievementCards = document.querySelectorAll('.achievement-card');
-
-        const achievementObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
-            });
-        }, {
-            threshold: 0.3
-        });
-
-        achievementCards.forEach(card => achievementObserver.observe(card));
-    </script>
+   <script src = "/src/function.js "> </script>
 
 </body>
 </html>

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom animation */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -18,7 +17,6 @@
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Add this in your style.css or <style> tag */
 .achievement-card {
     transition: all 0.7s ease-out;
 }
